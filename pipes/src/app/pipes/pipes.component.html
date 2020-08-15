@@ -1,0 +1,56 @@
+<h1>Pipes in Angular</h1>
+
+<div>
+    <h3>Date and Time Pipes </h3>
+    <p>Enter actual mater</p>
+    <button (click) = dates()>Check Date and Time</button>
+    
+    <p>Full Date : {{ currentDate | date:'full' }}</p>    
+    <p>Full Date : {{ currentDate | date:'shortDate' }}</p>    
+    <p>Full Date : {{ currentDate | date:'mediumDate' }}</p>    
+    <p>Full Date : {{ currentDate | date:'fullDate' }}</p>    
+    <p>Full Date : {{ currentDate | date:'shortTime' }}</p>    
+    <p>Full Date : {{ currentDate | date:'mediumTime' }}</p>    
+    <p>Full Date : {{ currentDate | date:'fullTime' }}</p>    
+        
+</div>
+
+
+<div>
+    <h3>Number Pipes </h3>
+    <p>Enter actual number</p>
+    <input type="text" #n (ngModel)="number"><br><br>
+    <button (click) = numberPipe(n.value)>Convert</button>
+    <p>2 Decimal place: {{ numPipe | number: '0.2-3' }}</p>
+</div>
+
+
+
+<div>
+    <h3>Currency Pipes </h3>
+    <p>Enter actual currency</p>
+    <input type="text" #currency (ngModel)="number"><br><br>
+    <button (click) = cur(currency.value)>Convert</button>
+    <p>Currency in USD: {{ num | currency: 'USD' }}</p><p>USD Doller : USD {{ num }}</p>
+    <p>Currency in INR: {{ num | currency: 'INR' }}</p><p>INR : INR {{ num }}</p>
+</div>
+
+
+<div>
+    <h3>String Related Pipes </h3>
+    <p>Enter actual mater</p>
+    <input type="text" #names (ngModel)="name"><br><br>
+    <button (click) = strConvert(names.value)>Convert</button>
+    <p>Upper Case: {{ name | uppercase }}</p>
+    <p>Lower case: {{ name | lowercase }}</p>
+</div>
+
+
+<div>
+    <h3>Percentage Pipes </h3>
+    <p>Enter actual percentage</p>
+    <input type="text" #percen (ngModel)="number"><br><br>
+    <button (click) = percentagePipe(percen.value)>Convert</button>
+    <p>2 Decimal place: {{ percentagesPipe | percent: '0.2-3' }}</p>
+</div>
+
